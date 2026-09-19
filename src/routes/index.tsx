@@ -47,6 +47,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { resolveAsset } from "@/lib/utils";
 import data from "@/data/portfolio.json";
 
 export const Route = createFileRoute("/")({
@@ -153,7 +154,7 @@ function PortfolioPage() {
               >
                 {data.person.avatar ? (
                   <img
-                    src={data.person.avatar}
+                    src={resolveAsset(data.person.avatar)}
                     alt={data.person.name}
                     className="brand-mark brand-avatar"
                     width={48}
@@ -177,7 +178,7 @@ function PortfolioPage() {
               <DialogHeader className="profile-modal-header">
                 <div className="profile-modal-avatar-wrapper">
                   <img
-                    src={data.person.avatar || ""}
+                    src={resolveAsset(data.person.avatar)}
                     alt={data.person.name}
                     className="profile-modal-avatar"
                     width={92}

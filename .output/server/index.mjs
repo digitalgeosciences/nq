@@ -16,40 +16,26 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/assets/index-DpCf5AO2.js": {
+	"/assets/routes-Bd_QbrS2.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6466c-w8x+vw5STnHjYsO468l1oNUQdAc\"",
-		"mtime": "2026-09-19T09:41:12.291Z",
-		"size": 411244,
-		"path": "../public/assets/index-DpCf5AO2.js"
+		"etag": "\"3eb25-K/C+MC3ooRYFiunynsxB9G/1a1c\"",
+		"mtime": "2026-09-19T09:47:34.799Z",
+		"size": 256805,
+		"path": "../public/assets/routes-Bd_QbrS2.js"
 	},
-	"/assets/routes-I1oTidlf.js": {
+	"/assets/index-eUG-AY-G.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"3ea42-R5k/xLHpdAY1O/NOjFtknOw0hIQ\"",
-		"mtime": "2026-09-19T09:41:12.292Z",
-		"size": 256578,
-		"path": "../public/assets/routes-I1oTidlf.js"
+		"etag": "\"64681-k0kVPdybr8g5cjPsNTTE+582fOw\"",
+		"mtime": "2026-09-19T09:47:34.799Z",
+		"size": 411265,
+		"path": "../public/assets/index-eUG-AY-G.js"
 	},
 	"/assets/styles-CbcRg8l7.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"1787c-6hHogNv8HjrjzwvHIXvwXe49Bjk\"",
-		"mtime": "2026-09-19T09:41:12.292Z",
+		"mtime": "2026-09-19T09:47:34.800Z",
 		"size": 96380,
 		"path": "../public/assets/styles-CbcRg8l7.css"
-	},
-	"/robots.txt": {
-		"type": "text/plain; charset=utf-8",
-		"etag": "\"ae-hLVBrSrDdpIw3Xl0dJPRkupPepQ\"",
-		"mtime": "2026-09-15T11:59:02.652Z",
-		"size": 174,
-		"path": "../public/robots.txt"
-	},
-	"/avatars/naif.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"9131-gf77V7Q7a3NsbMM9btHb3oTOGi8\"",
-		"mtime": "2026-09-19T08:41:16.550Z",
-		"size": 37169,
-		"path": "../public/avatars/naif.jpeg"
 	},
 	"/.nojekyll": {
 		"type": "text/plain; charset=utf-8",
@@ -58,12 +44,26 @@ var public_assets_data_default = {
 		"size": 33,
 		"path": "../public/.nojekyll"
 	},
+	"/robots.txt": {
+		"type": "text/plain; charset=utf-8",
+		"etag": "\"ae-hLVBrSrDdpIw3Xl0dJPRkupPepQ\"",
+		"mtime": "2026-09-15T11:59:02.652Z",
+		"size": 174,
+		"path": "../public/robots.txt"
+	},
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"3c2e-x3LDpQzKDKeIgWlHCezQzFzlUcY\"",
 		"mtime": "2026-03-06T20:29:14.199Z",
 		"size": 15406,
 		"path": "../public/favicon.ico"
+	},
+	"/avatars/naif.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"9131-gf77V7Q7a3NsbMM9btHb3oTOGi8\"",
+		"mtime": "2026-09-19T08:41:16.550Z",
+		"size": 37169,
+		"path": "../public/avatars/naif.jpeg"
 	}
 };
 //#endregion

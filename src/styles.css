@@ -469,7 +469,7 @@ h1 {
 }
 
 .section-heading p,
-.contact-intro>p {
+.contact-intro > p {
   margin-top: 0.9rem;
   color: var(--muted-foreground);
 }
@@ -794,7 +794,7 @@ h1 {
   align-items: start;
 }
 
-.contact-intro>p {
+.contact-intro > p {
   color: color-mix(in oklab, var(--background) 65%, transparent);
 }
 
@@ -932,7 +932,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-
   .hero-grid,
   .philosophy-card,
   .contact-grid {
@@ -1171,9 +1170,11 @@ footer {
   position: relative;
   min-height: min(850px, calc(100svh - 68px));
   overflow: hidden;
-  background: linear-gradient(145deg,
-      var(--background),
-      color-mix(in oklab, var(--accent) 45%, var(--background)));
+  background: linear-gradient(
+    145deg,
+    var(--background),
+    color-mix(in oklab, var(--accent) 45%, var(--background))
+  );
 }
 
 .hero-section::before {
@@ -1460,7 +1461,7 @@ footer {
   max-width: 900px;
 }
 
-.contact-intro>p {
+.contact-intro > p {
   max-width: 650px;
 }
 
@@ -1510,7 +1511,7 @@ footer {
   transform: scale(1.05);
 }
 
-.social-link>span:nth-child(2) {
+.social-link > span:nth-child(2) {
   display: grid;
 }
 
@@ -1520,7 +1521,7 @@ footer {
   font-weight: 600;
 }
 
-.social-link>svg {
+.social-link > svg {
   width: 15px;
   opacity: 0.65;
 }
