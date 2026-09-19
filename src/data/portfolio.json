@@ -2,6 +2,7 @@
   "person": {
     "name": "Naif Alqubalee",
     "initials": "NA",
+    "avatar": "/avatars/naif.jpeg",
     "role": "Backend Software Engineer",
     "location": "Khobar, Saudi Arabia",
     "availability": "Open to backend engineering opportunities",
@@ -9,7 +10,7 @@
     "subheadline": "Specializing in NestJS, Node.js, TypeScript, and PostgreSQL.",
     "email": "naif@qubalee.com",
     "bio": "I turn ambitious product ideas into resilient backend systems. My work centers on dependable REST APIs, thoughtful relational data models, JWT and role-based access control, and repeatable Docker-based delivery.",
-    "copyright": "Naif Alqubalee. Built with care and clean code."
+    "copyright": "Naif Alqubalee"
   },
   "navigation": [
     {
@@ -55,19 +56,12 @@
     {
       "category": "Core & Languages",
       "icon": "Code2",
-      "items": [
-        "TypeScript",
-        "JavaScript",
-        "Node.js"
-      ]
+      "items": ["TypeScript", "JavaScript", "Node.js"]
     },
     {
       "category": "Frameworks & ORMs",
       "icon": "Blocks",
-      "items": [
-        "NestJS",
-        "TypeORM"
-      ]
+      "items": ["NestJS", "TypeORM"]
     },
     {
       "category": "Databases & Security",
@@ -82,12 +76,7 @@
     {
       "category": "DevOps & Tools",
       "icon": "Container",
-      "items": [
-        "Docker",
-        "Git",
-        "GitHub",
-        "Postman"
-      ]
+      "items": ["Docker", "Git", "GitHub", "Postman"]
     }
   ],
   "projects": [
@@ -96,12 +85,7 @@
       "subtitle": "Blockchain-Based Community Funding Platform",
       "date": "Sep 2025 — Apr 2026",
       "description": "A secure funding platform with transparent campaign workflows, verifiable transactions, and role-aware administrative controls.",
-      "technologies": [
-        "NestJS",
-        "TypeScript",
-        "PostgreSQL",
-        "Blockchain"
-      ],
+      "technologies": ["NestJS", "TypeScript", "PostgreSQL", "Blockchain"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -109,12 +93,7 @@
       "subtitle": "Modular commerce backend",
       "date": "Sep 2026",
       "description": "A maintainable order lifecycle service with inventory coordination, transactional consistency, and clear domain boundaries.",
-      "technologies": [
-        "Node.js",
-        "NestJS",
-        "TypeORM",
-        "PostgreSQL"
-      ],
+      "technologies": ["Node.js", "NestJS", "TypeORM", "PostgreSQL"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -122,12 +101,7 @@
       "subtitle": "Secure productivity service",
       "date": "Aug 2026",
       "description": "A documented REST API for managing personal tasks with validated requests, JWT authentication, and ownership controls.",
-      "technologies": [
-        "NestJS",
-        "JWT",
-        "PostgreSQL",
-        "Docker"
-      ],
+      "technologies": ["NestJS", "JWT", "PostgreSQL", "Docker"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -135,12 +109,7 @@
       "subtitle": "Structured contact data platform",
       "date": "Aug 2026",
       "description": "A reliable CRUD API featuring clean modular architecture, robust validation, searchable records, and consistent errors.",
-      "technologies": [
-        "TypeScript",
-        "Node.js",
-        "TypeORM",
-        "Postman"
-      ],
+      "technologies": ["TypeScript", "Node.js", "TypeORM", "Postman"],
       "repository": "https://github.com/nq001"
     }
   ],
@@ -206,81 +175,24 @@
     }
   ],
   "code": [
-    [
-      "keyword",
-      "@Controller"
-    ],
-    [
-      "plain",
-      "('projects')"
-    ],
-    [
-      "line",
-      ""
-    ],
-    [
-      "keyword",
-      "export class"
-    ],
-    [
-      "type",
-      " ProjectsController "
-    ],
-    [
-      "plain",
-      "{"
-    ],
-    [
-      "line",
-      "  constructor("
-    ],
-    [
-      "keyword",
-      "    private readonly"
-    ],
-    [
-      "plain",
-      " service: ProjectsService,"
-    ],
-    [
-      "line",
-      "  ) {}"
-    ],
-    [
-      "line",
-      ""
-    ],
-    [
-      "decorator",
-      "  @Get()"
-    ],
-    [
-      "keyword",
-      "  async"
-    ],
-    [
-      "type",
-      " findAll"
-    ],
-    [
-      "plain",
-      "() {"
-    ],
-    [
-      "keyword",
-      "    return"
-    ],
-    [
-      "plain",
-      " this.service.findAll();"
-    ],
-    [
-      "line",
-      "  }"
-    ],
-    [
-      "plain",
-      "}"
-    ]
+    ["keyword", "@Controller"],
+    ["plain", "('projects')"],
+    ["line", ""],
+    ["keyword", "export class"],
+    ["type", " ProjectsController "],
+    ["plain", "{"],
+    ["line", "  constructor("],
+    ["keyword", "    private readonly"],
+    ["plain", " service: ProjectsService,"],
+    ["line", "  ) {}"],
+    ["line", ""],
+    ["decorator", "  @Get()"],
+    ["keyword", "  async"],
+    ["type", " findAll"],
+    ["plain", "() {"],
+    ["keyword", "    return"],
+    ["plain", " this.service.findAll();"],
+    ["line", "  }"],
+    ["plain", "}"]
   ]
 }

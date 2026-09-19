@@ -16,26 +16,12 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/assets/styles-hT6z5jT_.css": {
+	"/assets/styles-CLuzvbTK.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"16d71-6MwemMM7VqP2WRYECBuDhdvrKo4\"",
-		"mtime": "2026-09-17T13:00:58.903Z",
-		"size": 93553,
-		"path": "../public/assets/styles-hT6z5jT_.css"
-	},
-	"/robots.txt": {
-		"type": "text/plain; charset=utf-8",
-		"etag": "\"ae-hLVBrSrDdpIw3Xl0dJPRkupPepQ\"",
-		"mtime": "2026-09-15T11:59:02.652Z",
-		"size": 174,
-		"path": "../public/robots.txt"
-	},
-	"/assets/routes-Cx9C3-yx.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"37a89-eCyoJLpR9KLteA8NdDbnDVrBaLE\"",
-		"mtime": "2026-09-17T13:00:58.903Z",
-		"size": 227977,
-		"path": "../public/assets/routes-Cx9C3-yx.js"
+		"etag": "\"178e5-WWs9VGf01T3LEBCH4EBzVDulBSY\"",
+		"mtime": "2026-09-19T09:12:17.541Z",
+		"size": 96485,
+		"path": "../public/assets/styles-CLuzvbTK.css"
 	},
 	"/.nojekyll": {
 		"type": "text/plain; charset=utf-8",
@@ -44,12 +30,33 @@ var public_assets_data_default = {
 		"size": 33,
 		"path": "../public/.nojekyll"
 	},
-	"/assets/index-BwgyjOsv.js": {
+	"/assets/routes-BGpmuejp.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"98a7d-po+miX8r9cpkvgTAj7B0LT+ziQM\"",
-		"mtime": "2026-09-17T13:00:58.902Z",
-		"size": 625277,
-		"path": "../public/assets/index-BwgyjOsv.js"
+		"etag": "\"4243e-xD/vI9l2SjXO/meCB2QqU9JdvVc\"",
+		"mtime": "2026-09-19T09:12:17.541Z",
+		"size": 271422,
+		"path": "../public/assets/routes-BGpmuejp.js"
+	},
+	"/robots.txt": {
+		"type": "text/plain; charset=utf-8",
+		"etag": "\"ae-hLVBrSrDdpIw3Xl0dJPRkupPepQ\"",
+		"mtime": "2026-09-15T11:59:02.652Z",
+		"size": 174,
+		"path": "../public/robots.txt"
+	},
+	"/assets/index-D4CvaK9i.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"98a84-FAsrt1rN5DlkuEJ7MW6jraVT0Vo\"",
+		"mtime": "2026-09-19T09:12:17.541Z",
+		"size": 625284,
+		"path": "../public/assets/index-D4CvaK9i.js"
+	},
+	"/avatars/naif.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"9131-gf77V7Q7a3NsbMM9btHb3oTOGi8\"",
+		"mtime": "2026-09-19T08:41:16.550Z",
+		"size": 37169,
+		"path": "../public/avatars/naif.jpeg"
 	},
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
