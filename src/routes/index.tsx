@@ -11,16 +11,13 @@ import {
   Container,
   Copy,
   Database,
-  Github,
-  Linkedin,
-  Mail,
   MapPin,
   Menu,
   Network,
   ShieldCheck,
   X,
 } from "lucide-react";
-import { FaAws } from "react-icons/fa6";
+import { FaAws, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 import {
   SiDocker,
   SiFreecodecamp,
@@ -80,9 +77,9 @@ const icons = {
   Code2,
   Container,
   Database,
-  Github,
-  Linkedin,
-  Mail,
+  Github: FaGithub,
+  Linkedin: FaLinkedin,
+  Mail: FaEnvelope,
   Network,
   ShieldCheck,
 };
@@ -226,7 +223,7 @@ function PortfolioPage() {
                   asChild
                 >
                   <a href={`mailto:${data.person.email}`}>
-                    <Mail className="size-4" />
+                    <FaEnvelope className="size-4" />
                   </a>
                 </Button>
 
@@ -239,7 +236,7 @@ function PortfolioPage() {
                   asChild
                 >
                   <a href="https://github.com/nq001" target="_blank" rel="noopener noreferrer">
-                    <Github className="size-4" />
+                    <FaGithub className="size-4" />
                   </a>
                 </Button>
 
@@ -256,7 +253,7 @@ function PortfolioPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Linkedin className="size-4" />
+                    <FaLinkedin className="size-4" />
                   </a>
                 </Button>
               </div>

@@ -1496,18 +1496,26 @@ footer {
   place-items: center;
   border-radius: 8px;
   background: var(--card);
-  color: var(--foreground);
+  color: #000000;
   box-shadow: 0 2px 8px color-mix(in oklab, var(--foreground) 15%, transparent);
   border: 1px solid color-mix(in oklab, var(--background) 25%, transparent);
   transition:
     transform 180ms ease-out,
     background 180ms ease-out,
+    border-color 180ms ease-out,
     color 180ms ease-out;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .social-link:hover .social-icon {
   background: #ffffff;
-  color: var(--primary);
+  color: #000000;
+  border-color: var(--primary);
   transform: scale(1.05);
 }
 

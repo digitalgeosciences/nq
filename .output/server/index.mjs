@@ -16,26 +16,19 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/assets/routes-Bd_QbrS2.js": {
+	"/assets/routes-t1lpLP33.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"3eb25-K/C+MC3ooRYFiunynsxB9G/1a1c\"",
-		"mtime": "2026-09-19T09:47:34.799Z",
-		"size": 256805,
-		"path": "../public/assets/routes-Bd_QbrS2.js"
+		"etag": "\"3eb1c-8XkQH8pLd6ixGi7TFbvyOodOS4A\"",
+		"mtime": "2026-09-19T09:49:42.434Z",
+		"size": 256796,
+		"path": "../public/assets/routes-t1lpLP33.js"
 	},
-	"/assets/index-eUG-AY-G.js": {
+	"/assets/index-aYk5yGlD.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"64681-k0kVPdybr8g5cjPsNTTE+582fOw\"",
-		"mtime": "2026-09-19T09:47:34.799Z",
-		"size": 411265,
-		"path": "../public/assets/index-eUG-AY-G.js"
-	},
-	"/assets/styles-CbcRg8l7.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"1787c-6hHogNv8HjrjzwvHIXvwXe49Bjk\"",
-		"mtime": "2026-09-19T09:47:34.800Z",
-		"size": 96380,
-		"path": "../public/assets/styles-CbcRg8l7.css"
+		"etag": "\"6466c-+X7Wdi9/CY7oC6Ls0VjBwfUFCr4\"",
+		"mtime": "2026-09-19T09:49:42.434Z",
+		"size": 411244,
+		"path": "../public/assets/index-aYk5yGlD.js"
 	},
 	"/.nojekyll": {
 		"type": "text/plain; charset=utf-8",
@@ -51,12 +44,12 @@ var public_assets_data_default = {
 		"size": 174,
 		"path": "../public/robots.txt"
 	},
-	"/favicon.ico": {
-		"type": "image/vnd.microsoft.icon",
-		"etag": "\"3c2e-x3LDpQzKDKeIgWlHCezQzFzlUcY\"",
-		"mtime": "2026-03-06T20:29:14.199Z",
-		"size": 15406,
-		"path": "../public/favicon.ico"
+	"/assets/styles-CbcRg8l7.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"1787c-6hHogNv8HjrjzwvHIXvwXe49Bjk\"",
+		"mtime": "2026-09-19T09:49:42.434Z",
+		"size": 96380,
+		"path": "../public/assets/styles-CbcRg8l7.css"
 	},
 	"/avatars/naif.jpeg": {
 		"type": "image/jpeg",
@@ -64,6 +57,13 @@ var public_assets_data_default = {
 		"mtime": "2026-09-19T08:41:16.550Z",
 		"size": 37169,
 		"path": "../public/avatars/naif.jpeg"
+	},
+	"/favicon.ico": {
+		"type": "image/vnd.microsoft.icon",
+		"etag": "\"3c2e-x3LDpQzKDKeIgWlHCezQzFzlUcY\"",
+		"mtime": "2026-03-06T20:29:14.199Z",
+		"size": 15406,
+		"path": "../public/favicon.ico"
 	}
 };
 //#endregion
