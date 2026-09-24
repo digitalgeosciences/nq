@@ -259,9 +259,6 @@ function PortfolioPage() {
               </div>
 
               <div className="availability profile-modal-status">
-                <span className="availability-dot">
-                  <i />
-                </span>
                 {data.person.availability}
               </div>
             </DialogContent>
@@ -326,9 +323,6 @@ function PortfolioPage() {
           <div className="shell hero-grid">
             <div className="hero-copy">
               <div className="availability">
-                <span className="availability-dot">
-                  <i />
-                </span>
                 {data.person.availability}
               </div>
               <h1>
