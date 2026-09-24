@@ -92,7 +92,7 @@
       "subtitle": "Modular commerce backend",
       "date": "Sep 2026",
       "description": "Developed a robust e commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency.",
-      "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis",  "Swagger"],
+      "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -100,7 +100,7 @@
       "subtitle": "Structured contact data platform",
       "date": "Aug 2026",
       "description": "Developed structured REST APIs to manage complex entities including multiple emails and business data. Implemented nested DTO validation, advanced PostgreSQL relationships using TypeORM, and comprehensive Swagger documentation.",
-      "technologies": ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Swagger"],
+      "technologies": ["NestJS", "TypeScript", "PostgreSQL", "TypeORM"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -108,7 +108,7 @@
       "subtitle": "Secure productivity service",
       "date": "Aug 2026",
       "description": "A documented REST API for managing personal tasks with validated requests, JWT authentication, and ownership controls.",
-      "technologies": ["NestJS", "JWT", "PostgreSQL", "Docker",  "Swagger"],
+      "technologies": ["NestJS", "JWT", "PostgreSQL", "Docker"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -116,7 +116,7 @@
       "subtitle": "Blockchain-Based Community Funding Platform",
       "date": "Sep 2025 — Apr 2026",
       "description": "Developed backend REST APIs and an SQL Server database for a blockchain crowdfunding platform, integrating Node.js services with Ethereum smart contracts.",
-      "technologies": ["NestJS", "SQL Server", "Blockchain", "Node.js",  "Swagger"],
+      "technologies": ["NestJS", "SQL Server", "Blockchain", "Node.js"],
       "repository": "https://github.com/nq001"
     }
   ],
