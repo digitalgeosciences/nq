@@ -4,12 +4,12 @@
     "initials": "NA",
     "avatar": "/avatars/naif.jpeg",
     "role": "Backend Software Engineer",
-    "location": "Khobar, Eastern Province, Saudi Arabia",
+    "location": "Khobar, Saudi Arabia",
     "availability": "Open to backend engineering opportunities",
     "headline": "Backend Software Engineer | Building Secure, Scalable, & Maintainable Systems",
     "subheadline": "Specializing in NestJS, Node.js, TypeScript, PostgreSQL, and Docker.",
     "email": "naif@qubalee.com",
-    "bio": "I turn ambitious product ideas into resilient backend systems. With professional experience designing RESTful APIs and containerized with docker, my work centers on dependable relational data models, role-based access control, and asynchronous event-driven architecture.",
+    "bio": "I turn ambitious product ideas into resilient backend systems. With professional experience designing RESTful APIs and containerized with docker, my work centers on dependable relational data models, role based access control, and asynchronous event driven architecture.",
     "copyright": "Naif Alqubalee"
   },
   "navigation": [
@@ -91,8 +91,8 @@
       "title": "Commerce & Order Management Platform",
       "subtitle": "Modular commerce backend",
       "date": "Sep 2026",
-      "description": "Developed a robust e-commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency.",
-      "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis"],
+      "description": "Developed a robust e commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency.",
+      "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis",  "Swagger"],
       "repository": "https://github.com/nq001"
     },
     {
@@ -108,15 +108,15 @@
       "subtitle": "Secure productivity service",
       "date": "Aug 2026",
       "description": "A documented REST API for managing personal tasks with validated requests, JWT authentication, and ownership controls.",
-      "technologies": ["NestJS", "JWT", "PostgreSQL", "Docker"],
+      "technologies": ["NestJS", "JWT", "PostgreSQL", "Docker",  "Swagger"],
       "repository": "https://github.com/nq001"
     },
     {
-      "title": "FundChain",
+      "title": "FundChain (Graduation Project CS)",
       "subtitle": "Blockchain-Based Community Funding Platform",
       "date": "Sep 2025 — Apr 2026",
       "description": "Developed backend REST APIs and an SQL Server database for a blockchain crowdfunding platform, integrating Node.js services with Ethereum smart contracts.",
-      "technologies": ["NestJS", "SQL Server", "Blockchain", "Node.js"],
+      "technologies": ["NestJS", "SQL Server", "Blockchain", "Node.js",  "Swagger"],
       "repository": "https://github.com/nq001"
     }
   ],
