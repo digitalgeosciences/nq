@@ -57,7 +57,7 @@
       "company": "Digital Geosciences",
       "role": "Backend Engineer",
       "date": "Sep 2026 - Present",
-      "description": "Designed and implemented RESTful APIs using NestJS, TypeScript, and Node.js[cite: 1]. Built and optimized PostgreSQL database schemas, queries, and relations[cite: 1]. Containerized services with Docker and applied modular architecture patterns to independent backend systems[cite: 1]."
+      "description": "Designed and implemented RESTful APIs using NestJS, TypeScript, and Node.js. Built and optimized PostgreSQL database schemas, queries, and relations. Containerized services with Docker and applied modular architecture patterns to independent backend systems."
     }
   ],
   "skills": [
@@ -91,7 +91,7 @@
       "title": "Commerce & Order Management Platform",
       "subtitle": "Modular commerce backend",
       "date": "Sep 2026",
-      "description": "Developed a robust e-commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency[cite: 1].",
+      "description": "Developed a robust e-commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency.",
       "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis"],
       "repository": "https://github.com/nq001"
     },
@@ -99,7 +99,7 @@
       "title": "Contact Management API",
       "subtitle": "Structured contact data platform",
       "date": "Aug 2026",
-      "description": "Developed structured REST APIs[cite: 2] to manage complex entities including multiple emails and business data. Implemented nested DTO validation, advanced PostgreSQL[cite: 2] relationships using TypeORM[cite: 2], and comprehensive Swagger documentation.",
+      "description": "Developed structured REST APIs to manage complex entities including multiple emails and business data. Implemented nested DTO validation, advanced PostgreSQL relationships using TypeORM, and comprehensive Swagger documentation.",
       "technologies": ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Swagger"],
       "repository": "https://github.com/nq001"
     },
@@ -115,7 +115,7 @@
       "title": "FundChain",
       "subtitle": "Blockchain-Based Community Funding Platform",
       "date": "Sep 2025 — Apr 2026",
-      "description": "Developed backend REST APIs and an SQL Server database for a blockchain crowdfunding platform, integrating Node.js services with Ethereum smart contracts[cite: 1].",
+      "description": "Developed backend REST APIs and an SQL Server database for a blockchain crowdfunding platform, integrating Node.js services with Ethereum smart contracts.",
       "technologies": ["NestJS", "SQL Server", "Blockchain", "Node.js"],
       "repository": "https://github.com/nq001"
     }
