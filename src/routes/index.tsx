@@ -165,7 +165,6 @@ function PortfolioPage() {
                 <span className="brand-copy">
                   <strong>{data.person.name}</strong>
                   <small>
-                    <span />
                     {data.person.role}
                   </small>
                 </span>
