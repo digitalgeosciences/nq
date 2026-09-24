@@ -121,8 +121,8 @@
     }
   ],
   "certifications": [
-    {
-      "title": "CS50x: Introduction to Computer Science",
+   {
+      "title": "CS50x: Introduction to CS",
       "credential": "Course Certificate",
       "issuer": "Harvard University",
       "icon": "Harvard"
@@ -140,33 +140,40 @@
       "icon": "Forage"
     },
     {
-      "title": "Relational Database V8",
-      "credential": "Developer Certification",
-      "issuer": "freeCodeCamp",
-      "icon": "FreeCodeCamp"
+      "title": "Software Development Job Simulation",
+      "credential": "Completion Certificate",
+      "issuer": "Datacom · Forage",
+      "icon": "Datacom"
+    },
+    {
+      "title": "Product Management Job Simulation",
+      "credential": "Completion Certificate",
+      "issuer": "Forage",
+      "icon": "Forage"
     },
     {
       "title": "Machine Learning Foundations",
       "credential": "AWS Educate",
       "issuer": "AWS",
       "icon": "AWS"
-    }
-  ],
-  "socials": [
-    {
-      "label": "Github.com/nq001",
-      "url": "https://github.com/nq001",
-      "icon": "Github"
     },
     {
-      "label": "Linkedin.com/in/naifalqubalee",
-      "url": "https://www.linkedin.com/in/naifalqubalee",
-      "icon": "Linkedin"
+      "title": "Introducing Generative AI with AWS",
+      "credential": "Course Certificate",
+      "issuer": "Udacity",
+      "icon": "Udacity"
     },
     {
-      "label": "naif@qubalee.com",
-      "url": "mailto:naif@qubalee.com",
-      "icon": "Mail"
+      "title": "Relational Database V8",
+      "credential": "Developer Certification",
+      "issuer": "freeCodeCamp",
+      "icon": "FreeCodeCamp"
+    },
+    {
+      "title": "Responsive Web Design",
+      "credential": "Developer Certification",
+      "issuer": "freeCodeCamp",
+      "icon": "FreeCodeCamp"
     }
   ],
   "code": [
