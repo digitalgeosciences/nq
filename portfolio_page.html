@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naif Alqubalee | Backend Software Engineer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: JetBrains Mono & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            900: '#14532d',
+                        },
+                        dark: {
+                            bg: '#090d16',
+                            card: '#111827',
+                            border: '#1f293d',
+                            accent: '#1e293b'
+                        },
+                        neon: {
+                            cyan: '#06b6d4',
+                            purple: '#a855f7',
+                            emerald: '#10b981',
+                            amber: '#f59e0b',
+                            rose: '#f43f5e'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['Fira Code', 'Courier New', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Background Grid Pattern */
+        .bg-grid-pattern {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Subtle Ambient Glow */
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.15);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Custom Scrollbar for Terminal */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #21262d;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #30363d;
+        }
+
+        /* SVG Architecture Node Hover Visuals */
+        .arch-node {
+            transition: all 0.3s ease;
+        }
+        .arch-node:hover {
+            filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+            transform: translateY(-2px);
+        }
+
+        /* Exploded Layers Stacking Animation & Effect */
+        .exploded-layer {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+        }
+        .exploded-container:hover .exploded-layer-1 {
+            transform: translateY(-24px) rotateX(15deg) rotateZ(-5deg);
+        }
+        .exploded-container:hover .exploded-layer-2 {
+            transform: translateY(0px) rotateX(15deg) rotateZ(-5deg);
+        }
+        .exploded-container:hover .exploded-layer-3 {
+            transform: translateY(24px) rotateX(15deg) rotateZ(-5deg);
+        }
+        
+        .pulse-line {
+            stroke-dasharray: 8;
+            animation: dash 15s linear infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -100;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-300 font-sans antialiased min-h-screen bg-grid-pattern relative selection:bg-brand-500 selection:text-black">
+
+    <!-- Ambient Glowing Background Elements -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed bottom-10 right-10 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark-bg/80 border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-lg font-bold text-slate-100 flex items-center gap-2">
+                        <span class="text-brand-500">&gt;</span> naif_alqubalee<span class="animate-pulse text-brand-500">_</span>
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 text-sm font-mono">
+                    <a href="#about" class="text-slate-400 hover:text-brand-500 transition-colors">&lt;about/&gt;</a>
+                    <a href="#projects" class="text-slate-400 hover:text-brand-500 transition-colors">&lt;architectures/&gt;</a>
+                    <a href="#skills" class="text-slate-400 hover:text-brand-500 transition-colors">&lt;stack/&gt;</a>
+                    <a href="#contact" class="text-slate-400 hover:text-brand-500 transition-colors">&lt;contact/&gt;</a>
+                </div>
+                <div>
+                    <a href="#contact" class="px-4 py-2 text-xs font-mono rounded-md border border-brand-500/40 text-brand-500 hover:bg-brand-500/10 transition-all">
+                        // Get in touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-16 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Bio & Main Info -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+                    Available for Senior Backend Engineering Roles
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-none">
+                    Naif Alqubalee
+                    <span class="block text-2xl sm:text-3xl text-slate-400 font-mono font-normal mt-3">
+                        Backend Software Engineer
+                    </span>
+                </h1>
+
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Specializing in high-throughput microservices, robust REST/GraphQL APIs, and resilient database architectures. Focused on building scalable backend infrastructure with <span class="text-white font-medium">NestJS, PostgreSQL, Redis,</span> and event-driven patterns.
+                </p>
+
+                <!-- Tech Stack Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-brands fa-node-js text-emerald-400"></i> NestJS / Node.js
+                    </span>
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-database text-cyan-400"></i> PostgreSQL
+                    </span>
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt text-red-400"></i> Redis
+                    </span>
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-diagram-project text-purple-400"></i> Microservices
+                    </span>
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-brands fa-docker text-blue-400"></i> Docker & K8s
+                    </span>
+                    <span class="px-3 py-1 text-xs font-mono rounded bg-dark-card border border-dark-border text-slate-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-network-wired text-amber-400"></i> RabbitMQ / Kafka
+                    </span>
+                </div>
+
+                <!-- CTA Action Buttons -->
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-all shadow-lg shadow-brand-600/20 flex items-center gap-2">
+                        <i class="fa-solid fa-code-branch"></i> View Architecture & Projects
+                    </a>
+                    <a href="https://github.com" target="_blank" class="px-6 py-3 rounded-lg bg-dark-card border border-dark-border hover:border-slate-600 text-slate-200 font-medium text-sm transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal Hero Box -->
+            <div class="lg:col-span-5">
+                <div class="bg-slate-950 border border-dark-border rounded-xl shadow-2xl overflow-hidden font-mono text-xs">
+                    <div class="bg-dark-accent px-4 py-2.5 flex items-center justify-between border-b border-dark-border">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                        </div>
+                        <span class="text-slate-400 font-mono text-[11px]">naif@dev-server:~</span>
+                        <i class="fa-solid fa-terminal text-slate-500"></i>
+                    </div>
+                    <div class="p-4 text-slate-300 space-y-3 font-mono leading-relaxed">
+                        <p><span class="text-brand-500">naif@system:~$</span> systemctl status backend-core</p>
+                        <p class="text-emerald-400">● backend-core.service - High-Performance API System</p>
+                        <p class="text-slate-400 pl-4">Loaded: loaded (/etc/systemd/system/backend.service)</p>
+                        <p class="text-slate-400 pl-4">Active: <span class="text-emerald-400 font-bold">active (running)</span> since 99.99% Uptime</p>
+                        <div class="border-t border-slate-800/80 my-2 pt-2 text-slate-400 space-y-1">
+                            <p>[INFO] PostgreSQL Connection Pool: <span class="text-cyan-400">30/30 Active</span></p>
+                            <p>[INFO] Redis Cache Hit Rate: <span class="text-purple-400">98.4%</span></p>
+                            <p>[INFO] Microservices Message Queue: <span class="text-amber-400">RabbitMQ Idle</span></p>
+                        </div>
+                        <p><span class="text-brand-500">naif@system:~$</span> <span class="animate-pulse">_</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Projects Section -->
+    <section id="projects" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-dark-border">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">// Featured Architecture & Code</h2>
+                <p class="text-2xl sm:text-3xl font-bold text-white">System Blueprints & Microservices</p>
+            </div>
+            <p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0 font-mono">
+                Interactive exploded schematics and live API execution environments showing deep architectural design.
+            </p>
+        </div>
+
+        <!-- Project 1: Microservices Order & Payment Engine -->
+        <div class="bg-dark-card border border-dark-border rounded-2xl overflow-hidden mb-12 glow-effect transition-all">
+            <!-- Project Header & Control Tabs -->
+            <div class="p-6 border-b border-dark-border bg-slate-900/60 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div>
+                    <div class="flex items-center gap-3 mb-1">
+                        <span class="px-2.5 py-0.5 text-[11px] font-mono rounded bg-brand-500/10 text-brand-500 border border-brand-500/20">Distributed System</span>
+                        <span class="text-xs text-slate-400 font-mono">Production Engine v2.4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Microservices Order & Payment Engine</h3>
+                </div>
+
+                <!-- Interactive Tabs for Project 1 -->
+                <div class="flex items-center bg-dark-bg p-1 rounded-lg border border-dark-border self-start lg:self-auto font-mono text-xs">
+                    <button onclick="switchTab('p1', 'arch')" id="p1-btn-arch" class="p1-tab-btn px-3 py-1.5 rounded-md text-white bg-brand-600 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-diagram-project"></i> Architecture
+                    </button>
+                    <button onclick="switchTab('p1', 'exploded')" id="p1-btn-exploded" class="p1-tab-btn px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group"></i> Exploded View
+                    </button>
+                    <button onclick="switchTab('p1', 'cli')" id="p1-btn-cli" class="p1-tab-btn px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-terminal"></i> Live Log Stream
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div class="p-6 bg-slate-950/80 min-h-[420px] flex items-center justify-center relative">
+
+                <!-- Tab 1: Interactive SVG Architecture Flowchart -->
+                <div id="p1-tab-arch" class="w-full h-full flex flex-col items-center justify-center py-4">
+                    <p class="text-xs font-mono text-slate-400 mb-4 text-center">
+                        <i class="fa-solid fa-hand-pointer text-brand-500"></i> Hover over system components to inspect active nodes and message flows.
+                    </p>
+
+                    <svg class="w-full max-w-4xl h-auto" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Connections / Pipeline lines -->
+                        <path d="M 120 160 L 220 160" stroke="#334155" stroke-width="2" class="pulse-line" stroke-dasharray="4 4" />
+                        <path d="M 340 160 L 440 100" stroke="#06b6d4" stroke-width="2" />
+                        <path d="M 340 160 L 440 220" stroke="#a855f7" stroke-width="2" />
+                        <path d="M 560 100 L 680 100" stroke="#10b981" stroke-width="2" />
+                        <path d="M 560 220 L 680 220" stroke="#f59e0b" stroke-width="2" />
+
+                        <!-- Flow Label Badges -->
+                        <rect x="145" y="145" width="50" height="18" rx="4" fill="#090d16" stroke="#334155" />
+                        <text x="170" y="157" fill="#94a3b8" font-size="9" font-family="Fira Code" text-anchor="middle">HTTPS</text>
+
+                        <rect x="360" y="115" width="60" height="18" rx="4" fill="#090d16" stroke="#06b6d4" />
+                        <text x="390" y="127" fill="#06b6d4" font-size="9" font-family="Fira Code" text-anchor="middle">gRPC / Event</text>
+
+                        <!-- Client Request Node -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('API Gateway Gateway', 'Handles auth, rate limiting, and request routing to downstream microservices.')">
+                            <rect x="20" y="120" width="100" height="80" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2" />
+                            <text x="70" y="155" fill="#f8fafc" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">Client App</text>
+                            <text x="70" y="175" fill="#94a3b8" font-size="10" font-family="Fira Code" text-anchor="middle">Frontend / Mobile</text>
+                        </g>
+
+                        <!-- API Gateway Node -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('NestJS API Gateway', 'Central entry point with JWT validation, throttle guards, and proxy middleware.')">
+                            <rect x="220" y="120" width="120" height="80" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+                            <text x="280" y="152" fill="#06b6d4" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">API Gateway</text>
+                            <text x="280" y="172" fill="#64748b" font-size="10" font-family="Fira Code" text-anchor="middle">NestJS / Fastify</text>
+                        </g>
+
+                        <!-- Order Service Node -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('Order Microservice', 'Manages order state machine, cart validation, and transactional workflows.')">
+                            <rect x="440" y="60" width="120" height="80" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+                            <text x="500" y="92" fill="#10b981" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">Order Service</text>
+                            <text x="500" y="112" fill="#64748b" font-size="10" font-family="Fira Code" text-anchor="middle">NestJS Module</text>
+                        </g>
+
+                        <!-- Payment Service Node -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('Payment Microservice', 'Processes webhooks, external gateways (Stripe/PayPal), and idempotency checks.')">
+                            <rect x="440" y="180" width="120" height="80" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="2" />
+                            <text x="500" y="212" fill="#a855f7" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">Payment Svc</text>
+                            <text x="500" y="232" fill="#64748b" font-size="10" font-family="Fira Code" text-anchor="middle">RabbitMQ Sub</text>
+                        </g>
+
+                        <!-- PostgreSQL Database -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('PostgreSQL Relational DB', 'Primary persistence layer with optimized query indexing and ACID compliance.')">
+                            <rect x="680" y="60" width="120" height="80" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+                            <text x="740" y="92" fill="#38bdf8" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">PostgreSQL</text>
+                            <text x="740" y="112" fill="#64748b" font-size="10" font-family="Fira Code" text-anchor="middle">Relational DB</text>
+                        </g>
+
+                        <!-- Redis Cache Layer -->
+                        <g class="arch-node cursor-pointer" onclick="showNodeDetail('Redis In-Memory Cache', 'Caches user sessions, hot inventory items, and pub/sub message states.')">
+                            <rect x="680" y="180" width="120" height="80" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="2" />
+                            <text x="740" y="212" fill="#f43f5e" font-size="12" font-family="Fira Code" font-weight="bold" text-anchor="middle">Redis Cache</text>
+                            <text x="740" y="232" fill="#64748b" font-size="10" font-family="Fira Code" text-anchor="middle">In-Memory</text>
+                        </g>
+                    </svg>
+
+                    <!-- Interactive Info Panel -->
+                    <div id="p1-node-info" class="mt-4 p-3 rounded-lg bg-dark-bg border border-dark-border text-center max-w-lg w-full">
+                        <span class="text-xs font-mono text-brand-500 font-bold block" id="node-title">Click/Hover Node Above</span>
+                        <span class="text-xs text-slate-400 font-mono" id="node-desc">Interactive schematic element showing backend message routing and persistence layers.</span>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Exploded Schema Layer Visual -->
+                <div id="p1-tab-exploded" class="hidden w-full flex flex-col items-center justify-center py-8">
+                    <p class="text-xs font-mono text-slate-400 mb-6 text-center">
+                        <i class="fa-solid fa-cubes text-purple-400"></i> Hover over the stack below to expand the architectural layer hierarchy.
+                    </p>
+
+                    <div class="exploded-container relative w-80 h-72 cursor-pointer flex flex-col items-center justify-center">
+                        <!-- Layer 3: Database & Cache -->
+                        <div class="exploded-layer exploded-layer-3 absolute w-72 h-28 rounded-xl bg-slate-900/90 border border-cyan-500/50 p-4 shadow-xl flex flex-col justify-between" style="transform: rotateX(25deg) rotateZ(-10deg) translateY(40deg);">
+                            <div class="flex items-center justify-between text-xs font-mono text-cyan-400 font-bold">
+                                <span>LAYER 01: PERSISTENCE & DATA</span>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="font-mono text-[11px] text-slate-300">
+                                <div>• PostgreSQL (Primary Relational)</div>
+                                <div>• Redis Cluster (Cache & Sessions)</div>
+                            </div>
+                            <div class="text-[10px] text-slate-500 font-mono">ACID Compliant • Connection Pooling</div>
+                        </div>
+
+                        <!-- Layer 2: Microservices & Event Bus -->
+                        <div class="exploded-layer exploded-layer-2 absolute w-72 h-28 rounded-xl bg-slate-900/90 border border-purple-500/50 p-4 shadow-xl flex flex-col justify-between" style="transform: rotateX(25deg) rotateZ(-10deg) translateY(0px);">
+                            <div class="flex items-center justify-between text-xs font-mono text-purple-400 font-bold">
+                                <span>LAYER 02: EVENT BROKER</span>
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="font-mono text-[11px] text-slate-300">
+                                <div>• RabbitMQ Message Exchange</div>
+                                <div>• Asynchronous Microservices</div>
+                            </div>
+                            <div class="text-[10px] text-slate-500 font-mono">Pub/Sub • Queue Resilience</div>
+                        </div>
+
+                        <!-- Layer 1: API Layer & NestJS Gateway -->
+                        <div class="exploded-layer exploded-layer-1 absolute w-72 h-28 rounded-xl bg-slate-900/90 border border-emerald-500/50 p-4 shadow-xl flex flex-col justify-between" style="transform: rotateX(25deg) rotateZ(-10deg) translateY(-40deg);">
+                            <div class="flex items-center justify-between text-xs font-mono text-emerald-400 font-bold">
+                                <span>LAYER 03: API GATEWAY</span>
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <div class="font-mono text-[11px] text-slate-300">
+                                <div>• NestJS Core & REST Controllers</div>
+                                <div>• JWT Auth & Rate Limiters</div>
+                            </div>
+                            <div class="text-[10px] text-slate-500 font-mono">Fastify Adapter • OpenAPI Docs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Simulated CLI Stream -->
+                <div id="p1-tab-cli" class="hidden w-full max-w-3xl font-mono text-xs text-slate-300 bg-slate-950 p-4 rounded-xl border border-dark-border overflow-x-auto">
+                    <div class="text-slate-500 mb-2">// Live Microservices Event Dispatch Log Output</div>
+                    <div class="space-y-1.5 leading-relaxed">
+                        <p><span class="text-slate-500">[2026-10-24 02:40:11]</span> <span class="text-emerald-400">[NestJS]</span> <span class="text-cyan-400">OrderController</span>: POST /api/v1/orders - 201 Created (12ms)</p>
+                        <p><span class="text-slate-500">[2026-10-24 02:40:11]</span> <span class="text-purple-400">[RabbitMQ]</span> Event published: <span class="text-amber-300">order.created</span> -> Payload: { orderId: "ord_99821", amount: 149.50 }</p>
+                        <p><span class="text-slate-500">[2026-10-24 02:40:12]</span> <span class="text-purple-400">[PaymentSvc]</span> Consumed <span class="text-amber-300">order.created</span> - Invoking Payment Gateway API...</p>
+                        <p><span class="text-slate-500">[2026-10-24 02:40:12]</span> <span class="text-red-400">[Redis]</span> SET order_session:ord_99821 TTL 3600 OK</p>
+                        <p><span class="text-slate-500">[2026-10-24 02:40:13]</span> <span class="text-emerald-400">[PaymentSvc]</span> Transaction approved: <span class="text-emerald-300">tx_pay_0019283</span></p>
+                        <p><span class="text-slate-500">[2026-10-24 02:40:13]</span> <span class="text-cyan-400">[PostgreSQL]</span> UPDATE orders SET status = 'PAID' WHERE id = 'ord_99821' (3ms)</p>
+                        <p class="text-emerald-400 pt-2"><i class="fa-solid fa-check-circle"></i> Workflow executed successfully. System state stable.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Card Bottom Tech Spec Summary -->
+            <div class="p-6 bg-dark-card border-t border-dark-border grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+                <div>
+                    <span class="text-slate-400 block mb-1">// KEY HIGHLIGHTS</span>
+                    <span class="text-slate-200">Event-driven decoupled microservices using NestJS + RabbitMQ.</span>
+                </div>
+                <div>
+                    <span class="text-slate-400 block mb-1">// PERFORMANCE</span>
+                    <span class="text-slate-200">Sub-15ms order validation with Redis distributed locking.</span>
+                </div>
+                <div>
+                    <span class="text-slate-400 block mb-1">// DATA RECOVERY</span>
+                    <span class="text-slate-200">Idempotency consumers preventing double-billing on retries.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: High-Throughput Auth & Identity Gateway -->
+        <div class="bg-dark-card border border-dark-border rounded-2xl overflow-hidden glow-cyan transition-all">
+            <div class="p-6 border-b border-dark-border bg-slate-900/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <div class="flex items-center gap-3 mb-1">
+                        <span class="px-2.5 py-0.5 text-[11px] font-mono rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Security & Auth Gateway</span>
+                        <span class="text-xs text-slate-400 font-mono">OAuth2 / JWT Engine</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">High-Throughput Auth & Identity Gateway</h3>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex items-center gap-3 font-mono text-xs">
+                    <button onclick="runAuthSimulation()" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-play"></i> Simulate cURL Request
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive Auth Live Shell & Inspector -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 border-b border-dark-border">
+                
+                <!-- Simulated Terminal Input & Response -->
+                <div class="lg:col-span-7 p-6 bg-slate-950 font-mono text-xs border-b lg:border-b-0 lg:border-r border-dark-border">
+                    <div class="text-slate-500 mb-3 flex items-center justify-between">
+                        <span>// Interactive Terminal Request Test</span>
+                        <span class="text-emerald-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Endpoint Online</span>
+                    </div>
+
+                    <!-- Input Command Box -->
+                    <div class="bg-slate-900 p-3 rounded border border-slate-800 text-slate-300 mb-4 overflow-x-auto">
+                        <span class="text-cyan-400">curl</span> -X POST http://auth.domain.internal/v1/token \<br>
+                        &nbsp;&nbsp;-H <span class="text-amber-300">"Content-Type: application/json"</span> \<br>
+                        &nbsp;&nbsp;-d <span class="text-emerald-300">'{"client_id":"app_01", "grant_type":"client_credentials"}'</span>
+                    </div>
+
+                    <!-- Dynamic Simulated JSON Output -->
+                    <div class="text-slate-400 mb-1">Response Headers & Token Payload:</div>
+                    <div id="curl-output" class="bg-slate-900/80 p-4 rounded border border-slate-800/80 text-emerald-400 leading-relaxed overflow-x-auto min-h-[160px]">
+                        HTTP/1.1 200 OK<br>
+                        Content-Type: application/json; charset=utf-8<br>
+                        X-RateLimit-Remaining: 9998<br>
+                        X-Response-Time: 1.82ms<br><br>
+                        {<br>
+                        &nbsp;&nbsp;<span class="text-slate-300">"access_token"</span>: <span class="text-amber-300">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5haWYiLCJpYXQiOjE1MTYyMzkwMjJ9..."</span>,<br>
+                        &nbsp;&nbsp;<span class="text-slate-300">"token_type"</span>: <span class="text-emerald-300">"Bearer"</span>,<br>
+                        &nbsp;&nbsp;<span class="text-slate-300">"expires_in"</span>: <span class="text-purple-300">3600</span><br>
+                        }
+                    </div>
+                </div>
+
+                <!-- Architectural Breakdown Sidebar -->
+                <div class="lg:col-span-5 p-6 bg-slate-900/40 font-mono text-xs space-y-4">
+                    <span class="text-slate-400 block">// AUTH PIPELINE STEPS</span>
+
+                    <div class="space-y-3">
+                        <div class="p-3 rounded bg-dark-bg border border-dark-border flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0 text-xs font-bold">1</div>
+                            <div>
+                                <span class="text-slate-200 font-bold block">Rate-Limiting Guard</span>
+                                <span class="text-slate-400 text-[11px]">Redis-backed sliding window counter protecting against brute-force attacks.</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded bg-dark-bg border border-dark-border flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center shrink-0 text-xs font-bold">2</div>
+                            <div>
+                                <span class="text-slate-200 font-bold block">Argon2id Hashing</span>
+                                <span class="text-slate-400 text-[11px]">Password hashing with high-memory cost guards for database credentials.</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded bg-dark-bg border border-dark-border flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 text-xs font-bold">3</div>
+                            <div>
+                                <span class="text-slate-200 font-bold block">Asymmetric JWT Signing</span>
+                                <span class="text-slate-400 text-[11px]">RS256 key pair rotation for distributed microservice verification.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Stack & Skills Grid -->
+    <section id="skills" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-dark-border">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">// TECHNICAL COMPETENCIES</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white mb-8">Backend Core Ecosystem</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Category 1 -->
+            <div class="p-6 bg-dark-card border border-dark-border rounded-xl space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <h3 class="font-mono text-base font-bold text-white">Frameworks & Runtimes</h3>
+                <ul class="text-xs font-mono text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> NestJS (TypeScript)</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Node.js / Express</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Fastify Framework</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Microservices Architecture</li>
+                </ul>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="p-6 bg-dark-card border border-dark-border rounded-xl space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3 class="font-mono text-base font-bold text-white">Databases & Storage</h3>
+                <ul class="text-xs font-mono text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> PostgreSQL & Prisma/TypeORM</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Redis (Cache & Pub/Sub)</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> MongoDB / NoSQL</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Query Optimization & Indexing</li>
+                </ul>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="p-6 bg-dark-card border border-dark-border rounded-xl space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <h3 class="font-mono text-base font-bold text-white">Messaging & DevOps</h3>
+                <ul class="text-xs font-mono text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> RabbitMQ & Kafka</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> Docker & Containerization</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> GitHub Actions / CI/CD</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> AWS (S3, EC2, ECS)</li>
+                </ul>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="p-6 bg-dark-card border border-dark-border rounded-xl space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-mono text-base font-bold text-white">API Standards & Security</h3>
+                <ul class="text-xs font-mono text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> RESTful Standards & OpenAPI</li>
+                    <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> GraphQL API Design</li>
+                    <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> OAuth2, JWT, Passport.js</li>
+                    <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Unit/E2E Testing (Jest)</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="py-16 bg-slate-950 border-t border-dark-border font-mono text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">// INITIATE CONTACT</h3>
+                    <p class="text-slate-400 max-w-md">
+                        Interested in discussing backend infrastructure, microservices architecture, or engineering roles? Let's connect.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-4 md:justify-end">
+                    <a href="mailto:contact@qubalee.com" class="px-5 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> contact@qubalee.com
+                    </a>
+                    <a href="https://github.com" target="_blank" class="px-5 py-3 rounded-lg bg-dark-card border border-dark-border text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="px-5 py-3 rounded-lg bg-dark-card border border-dark-border text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-slate-600">
+                <p>© 2026 Naif Alqubalee. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed with modern structural aesthetics.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts for Tab Switching & Terminal Interactions -->
+    <script>
+        // Tab switching logic for Project 1
+        function switchTab(projectId, tabName) {
+            // Hide all tab views for Project 1
+            document.getElementById('p1-tab-arch').classList.add('hidden');
+            document.getElementById('p1-tab-exploded').classList.add('hidden');
+            document.getElementById('p1-tab-cli').classList.add('hidden');
+
+            // Reset tab button styling
+            const buttons = document.querySelectorAll('.p1-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white');
+                btn.classList.add('text-slate-400');
+            });
+
+            // Show selected tab & activate button
+            document.getElementById(`p1-tab-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`p1-btn-${tabName}`);
+            activeBtn.classList.add('bg-brand-600', 'text-white');
+            activeBtn.classList.remove('text-slate-400');
+        }
+
+        // SVG Node Detail updates on click/hover
+        function showNodeDetail(title, description) {
+            const titleElem = document.getElementById('node-title');
+            const descElem = document.getElementById('node-desc');
+            titleElem.textContent = title;
+            descElem.textContent = description;
+        }
+
+        // Auth cURL Request Simulation
+        function runAuthSimulation() {
+            const outputBox = document.getElementById('curl-output');
+            outputBox.innerHTML = '<span class="text-amber-400 animate-pulse">// Executing POST /v1/token request...</span>';
+            
+            setTimeout(() => {
+                const randomTime = (Math.random() * 2 + 1).toFixed(2);
+                const randomRemaining = Math.floor(Math.random() * 50) + 9950;
+                
+                outputBox.innerHTML = `
+                    HTTP/1.1 200 OK<br>
+                    Content-Type: application/json; charset=utf-8<br>
+                    X-RateLimit-Remaining: ${randomRemaining}<br>
+                    X-Response-Time: ${randomTime}ms<br><br>
+                    {<br>
+                    &nbsp;&nbsp;<span class="text-slate-300">"access_token"</span>: <span class="text-amber-300">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWlmX2RldiIsImlhdCI6MTczMDM1MDAwM30..."</span>,<br>
+                    &nbsp;&nbsp;<span class="text-slate-300">"token_type"</span>: <span class="text-emerald-300">"Bearer"</span>,<br>
+                    &nbsp;&nbsp;<span class="text-slate-300">"expires_in"</span>: <span class="text-purple-300">3600</span>,<br>
+                    &nbsp;&nbsp;<span class="text-slate-300">"status"</span>: <span class="text-emerald-400">"AUTHENTICATED"</span><br>
+                    }
+                `;
+            }, 600);
+        }
+    </script>
+</body>
+</html>
