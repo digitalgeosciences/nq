@@ -84,12 +84,12 @@
   ],
   "projects": [
     {
-      "title": "Commerce & Order Management Platform",
-      "subtitle": "Modular commerce backend",
+      "title": "Market Without Borders (MWB)",
+      "subtitle": "Enterprise Multi-Store Marketplace & DOMP",
       "date": "Sep 2026",
-      "description": "Developed a robust e commerce backend engineered for system reliability to manage concurrent purchases, failed transactions, and idempotency.",
-      "technologies": ["Node.js", "NestJS", "PostgreSQL", "Redis"],
-      "repository": "https://github.com/nq001"
+      "description": "Architected a production-ready, full-stack multi-store marketplace with isolated vendor portals, distributed cart splitting, dispute resolution, and pessimistic ACID inventory locks with bilingual English/Arabic (RTL) support.",
+      "technologies": ["React 19", "NestJS", "TypeScript", "PostgreSQL", "Clean Architecture"],
+      "repository": "https://github.com/nq001/market-without-borders.git"
     },
     {
       "title": "Contact Management API",
